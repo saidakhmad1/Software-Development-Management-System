@@ -5,7 +5,7 @@ This Application will be developed in Laravel_MySQL.
 
 ## LIVE PREVIEW: 
 
-link
+https://amibappy.github.io/Software-Development-Management-System/
 
 
 ## Features:
