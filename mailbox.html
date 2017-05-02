@@ -1,0 +1,587 @@
+<!--
+//////////////////////////////////////////////////////////////////////////////////////////
+//										                                            	//
+// Project:	SOFTWARE DEVELOPMENT MANAGEMENT SYSTEM [SDMS]	                            //
+//		                                                                                //
+// File: mailbox.html	     						                                    //
+//											                                            //
+// Version: 1.0										                                    //
+//										                                            	//
+// Description:                                                                        	//
+//											                                            //
+//		Easy software project management applicaiton.                                   //
+//		Will be implemented on php - laravel							                //
+//											                                            //
+//											                                            //
+//											                                            //
+//											                                            //
+// Author: Ami Bappy [amibappy77@gmail.com]						                        //
+//                                                                                      //
+// Github: https://github.com/amibappy                                                  //
+//                                                                                      //
+//        										                                        //
+//  .______       .___      .______   .______   ____.  .____ 				            //
+//  |   _  \      /   \     |   _  \  |   _  \  \   \  /   / 				            //
+//  |  |_)  |    /  ^  \    |  |_)  | |  |_)  |  \   \/   /  				            //
+//  |   _  <    /  /_\  \   |   ___/  |   ___/    \_    _/   				            //
+//  |  |_)  |  /  _____  \  |  |      |  |          |  |     				            //
+//  |______/  /__/     \__\ | _|      | _|          |__|     				            //
+//                                                       				                //
+//											                                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Copyright (c) 2017 Bappy [amibappy77@gmail.com]					                    //
+// All Rights Reserved.									                                //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Unauthorized copying of this file, via any medium is strictly prohibited	            //
+// Proprietary and confidential								                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// DO NOT REMOVE THIS AREA                                                              //
+//                                                                                      //
+////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SDMS - Mail Box</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="project-page">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="projects.html">Select a Project &nbsp;&nbsp;&nbsp;<img src="images/project.png" alt="project"></a></li>
+                    <li>
+                        <a id="settings-icon" href="settings.html"><img src="images/settings.png" alt="settings"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/user.png" alt=""> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="users.html">Users Management</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+    <!--      Main Body    -->
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="dashboard.html" class="top-items"><img src="images/dashboard.png" alt="dashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="notifications.html" class="top-items"><img src="images/notifications.png" alt="notifications">Notifications <span class="circle-no">5</span></a>
+                </li>
+                <li class="active">
+                    <a href="mailbox.html" class="top-items"><img src="images/mailbox.png" alt="mailbox">Mail Box</a>
+                </li>
+                <li>
+                    <a href="documents.html" class="top-items"><img src="images/documents.png" alt="documents">Documents</a>
+                </li>
+                <li class="sidebar-titles">Project Management</li>
+                <li>
+                    <a href="planning.html"><img src="images/planning.png" alt="planning">Planning</a>
+                </li>
+                <li>
+                    <a href="tasks.html"><img src="images/task.png" alt="tasks">Tasks</a>
+                </li>
+                <li>
+                    <a href="members.html"><img src="images/members.png" alt="memebers">Members</a>
+                </li>
+                <li>
+                    <a href="configuration.html"><img src="images/configuration.png" alt="configuration">Configuration</a>
+                </li>
+                <li class="sidebar-titles">Requirement Management</li>
+                <li>
+                    <a href="proposals.html"><img src="images/proposal.png" alt="proposal">Proposals</a>
+                </li>
+                <li>
+                    <a href="strategies.html"><img src="images/strategies.png" alt="strategies">Strategies</a>
+                </li>
+                <li>
+                    <a href="features.html"><img src="images/features.png" alt="">Features</a>
+                </li>
+                <li class="sidebar-titles">Test Management</li>
+                <li>
+                    <a href="testcases.html"><img src="images/testcase.png" alt="test-case">Test Cases</a>
+                </li>
+                <li>
+                    <a href="testplans.html"><img src="images/testplan.png" alt="testplan">Test Plans</a>
+                </li>
+                <li class="sidebar-titles">Issue Management</li>
+                <li>
+                    <a href="issues.html"><img src="images/issue.png" alt="issue">Issues</a>
+                </li>
+            </ul>
+
+            <a href="#" class="back-to-top"><img src="images/up-arrow.png" alt="up-arrow"></a>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 dashboard-header">
+                        <h1>Mail Box</h1>
+                        <p>All informations are regarding selected project.</p>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-lg-10 col-md-10 col-sm-8 col-xs-9 mailbox-tab-container">
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 mailbox-tab-menu">
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item active text-center">
+                                            <img src="images/mail-new.png" alt="new-mail">
+                                            <br/>
+                                            <p>New Mail</p>
+                                        </a>
+                                        <a href="#" class="list-group-item text-center">
+                                            <img src="images/mail-inbox.png" alt="inbox">
+                                            <br/>
+                                            <p>Inbox</p>
+                                        </a>
+                                        <a href="#" class="list-group-item text-center">
+                                            <img src="images/mail-sent.png" alt="sent">
+                                            <br/>
+                                            <p>Sent</p>
+                                        </a>
+                                        <a href="#" class="list-group-item text-center">
+                                            <img src="images/mail-drafts.png" alt="drafts">
+                                            <br/>
+                                            <p>Drafts</p>
+                                        </a>
+                                        <a href="#" class="list-group-item text-center">
+                                            <img src="images/mail-trash.png" alt="trash">
+                                            <br/>
+                                            <p>Trash</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9 mailbox-tab">
+                                    <!-- flight section -->
+                                    <div class="mailbox-tab-content active">
+                                        <center>
+                                            <div class="new-mail-box">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label class="pull-left">To : </label>
+                                                        <select class="selectpicker form-control mail-select" multiple data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true" data-header="Select Members To Send Message" data-container="body" required>
+                                                            <option data-tokens="E002" data-subtext="Developer">Employee 1</option>
+                                                            <option data-tokens="E023" data-subtext="Designer">Employee 2</option>
+                                                            <option data-tokens="E007" data-subtext="Tester">Employee 3</option>
+                                                            <option data-tokens="E027" data-subtext="Analyst">Employee 4</option>
+                                                            <option data-tokens="E077" data-subtext="Developer">Employee 5</option>
+                                                            <option data-tokens="E037" data-subtext="Developer">Employee 6</option>
+                                                            <option data-tokens="E037" data-subtext="Designer">Employee 7</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="pull-left">Title : </label>
+                                                        <input type="text" class="form-control" id="mail-title" placeholder="Write message title" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="pull-left">Subject : </label>
+                                                        <input type="text" class="form-control" id="mail-subject" placeholder="Write message subject" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="comment" class="pull-left">Message:</label>
+                                                        <textarea placeholder="Write Your Message Here" class="form-control" maxlength="900" rows="9" id="mail-msg" required></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="pull-left">Attachment : </label>
+                                                        <input type="file" class="form-control" id="mail-attach" placeholder="file attachment" multiple>
+                                                    </div>
+
+                                                    <button type="submit" class="btn btn-default mail-send-btn pull-right">SEND</button>
+
+                                                    <button type="button" class="btn btn-default mail-drafts-btn pull-right">Save In Drafts</button>
+                                                </form>
+                                            </div>
+                                        </center>
+                                    </div>
+
+                                    <!-- Inbox Message -->
+                                    <div class="mailbox-tab-content">
+                                        <div class="mail-inbox-box">
+                                            <ul>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sent Message -->
+                                    <div class="mailbox-tab-content">
+                                        <div class="mail-inbox-box">
+                                            <ul>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!--  Drafts Message -->
+                                    <div class="mailbox-tab-content">
+                                        <div class="mail-inbox-box">
+                                            <ul>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Sent Message Title Goes Here</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <!-- Trash Message-->
+                                    <div class="mailbox-tab-content">
+                                        <div class="mail-inbox-box">
+                                            <ul>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="mail-header">
+                                                        <a class="inbox-trash" href="#"><img src="images/mail-trash.png" alt="trash"></a>
+                                                        <h3>Need New Functionality - Urgent !</h3>
+                                                        <p>Subject : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New update in F023</span></p>
+                                                        <p>Sender : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mr. Project Manager</span></p>
+                                                        <p>Time : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:33 pm , 3-7-17</span></p>
+                                                    </div>
+                                                    <div class="mail-body">
+                                                        <h5>Message :</h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vitae odio tempora dolorum nostrum quasi hic alias perspiciatis quibusdam aperiam suscipit quo incidunt assumenda esse sunt eum unde deleniti aut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, vel eaque qui maiores. Quasi ea eligendi fugiat ex est, voluptatibus laudantium ad, asperiores perferendis laborum libero nam deserunt repudiandae a.
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- end of mailbox-inbox -->
+                                    </div>
+                                    <!-- end of mailbox-tab-content -->
+                                </div>
+                                <!-- end of mailbox-tab (wrapper)-->
+                            </div>
+                            <!-- end of mailbox-tab-container -->
+                        </div>
+                        <!-- end col-md-12 row -->
+                    </div>
+                    <!-- end col-md-12 -->
+
+                </div>
+                <!--  end row -->
+
+            </div>
+            <!-- end container-fluid -->
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("div.mailbox-tab-menu>div.list-group>a").click(function (e) {
+                e.preventDefault();
+                $(this).siblings('a.active').removeClass("active");
+                $(this).addClass("active");
+                var index = $(this).index();
+                $("div.mailbox-tab>div.mailbox-tab-content").removeClass("active");
+                $("div.mailbox-tab>div.mailbox-tab-content").eq(index).addClass("active");
+            });
+        });
+
+        $(document).ready(function () {
+            $(".mail-header").click(function () {
+                $(this).parent().toggleClass("mail-full");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

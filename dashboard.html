@@ -1,0 +1,493 @@
+<!--
+//////////////////////////////////////////////////////////////////////////////////////////
+//										                                            	//
+// Project:	SOFTWARE DEVELOPMENT MANAGEMENT SYSTEM [SDMS]	                            //
+//		                                                                                //
+// File: dashboard.html	    						                                    //
+//											                                            //
+// Version: 1.0										                                    //
+//										                                            	//
+// Description:                                                                        	//
+//											                                            //
+//		Easy software project management applicaiton.                                   //
+//		Will be implemented on php - laravel							                //
+//											                                            //
+//											                                            //
+//											                                            //
+//											                                            //
+// Author: Ami Bappy [amibappy77@gmail.com]						                        //
+//                                                                                      //
+// Github: https://github.com/amibappy                                                  //
+//                                                                                      //
+//        										                                        //
+//  .______       .___      .______   .______   ____.  .____ 				            //
+//  |   _  \      /   \     |   _  \  |   _  \  \   \  /   / 				            //
+//  |  |_)  |    /  ^  \    |  |_)  | |  |_)  |  \   \/   /  				            //
+//  |   _  <    /  /_\  \   |   ___/  |   ___/    \_    _/   				            //
+//  |  |_)  |  /  _____  \  |  |      |  |          |  |     				            //
+//  |______/  /__/     \__\ | _|      | _|          |__|     				            //
+//                                                       				                //
+//											                                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Copyright (c) 2017 Bappy [amibappy77@gmail.com]					                    //
+// All Rights Reserved.									                                //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Unauthorized copying of this file, via any medium is strictly prohibited	            //
+// Proprietary and confidential								                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// DO NOT REMOVE THIS AREA                                                              //
+//                                                                                      //
+////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SDMS - Dashboard</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/progressbar.css">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="project-page">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="projects.html">Select a Project &nbsp;&nbsp;&nbsp;<img src="images/project.png" alt="project"></a></li>
+                    <li>
+                        <a id="settings-icon" href="settings.html"><img src="images/settings.png" alt="settings"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/user.png" alt=""> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="users.html">Users Management</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+    <!--      Main Body    -->
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="active">
+                    <a href="dashboard.html" class="top-items"><img src="images/dashboard.png" alt="dashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="notifications.html" class="top-items"><img src="images/notifications.png" alt="notifications">Notifications <span class="circle-no">5</span></a>
+                </li>
+                <li>
+                    <a href="mailbox.html" class="top-items"><img src="images/mailbox.png" alt="mailbox">Mail Box</a>
+                </li>
+                <li>
+                    <a href="documents.html" class="top-items"><img src="images/documents.png" alt="documents">Documents</a>
+                </li>
+                <li class="sidebar-titles">Project Management</li>
+                <li>
+                    <a href="planning.html"><img src="images/planning.png" alt="planning">Planning</a>
+                </li>
+                <li>
+                    <a href="tasks.html"><img src="images/task.png" alt="tasks">Tasks</a>
+                </li>
+                <li>
+                    <a href="members.html"><img src="images/members.png" alt="memebers">Members</a>
+                </li>
+                <li>
+                    <a href="configuration.html"><img src="images/configuration.png" alt="configuration">Configuration</a>
+                </li>
+                <li class="sidebar-titles">Requirement Management</li>
+                <li>
+                    <a href="proposals.html"><img src="images/proposal.png" alt="proposal">Proposals</a>
+                </li>
+                <li>
+                    <a href="strategies.html"><img src="images/strategies.png" alt="strategies">Strategies</a>
+                </li>
+                <li>
+                    <a href="features.html"><img src="images/features.png" alt="">Features</a>
+                </li>
+                <li class="sidebar-titles">Test Management</li>
+                <li>
+                    <a href="testcases.html"><img src="images/testcase.png" alt="test-case">Test Cases</a>
+                </li>
+                <li>
+                    <a href="testplans.html"><img src="images/testplan.png" alt="testplan">Test Plans</a>
+                </li>
+                <li class="sidebar-titles">Issue Management</li>
+                <li>
+                    <a href="issues.html"><img src="images/issue.png" alt="issue">Issues</a>
+                </li>
+            </ul>
+
+            <a href="#" class="back-to-top"><img src="images/up-arrow.png" alt="up-arrow"></a>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 dashboard-header">
+                        <h1>Dashboard</h1>
+                        <p>All informations are regarding selected project.</p>
+                    </div>
+
+                    <!------------ Dashboard Cards ------------->
+
+                    <div class="col-md-3">
+                        <div class="dashboard-cards">
+                            <div class="cards-header clearfix">
+                                <h3 class="pull-left">Tasks</h3>
+                                <div class="dropdown pull-right">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><img src="images/dots.png" alt="dots"></button>
+                                    <ul class="dropdown-menu dropdown-menu-left">
+                                        <li><a href="#">View All Tasks</a></li>
+                                        <li><a href="#">View Due Tasks</a></li>
+                                        <li><a href="#">View All Planning</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Create New Task</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cards-body">
+                                <h1 class="blue-color">35</h1>
+                                <p>DUE TAKS</p>
+                            </div>
+                            <div class="cards-footer">
+                                <p>Completed Today : 7</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="dashboard-cards">
+                            <div class="cards-header clearfix">
+                                <h3 class="pull-left">Features</h3>
+                                <div class="dropdown pull-right">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><img src="images/dots.png" alt="dots"></button>
+                                    <ul class="dropdown-menu dropdown-menu-left">
+                                        <li><a href="#">View All Features</a></li>
+                                        <li><a href="#">View Due Features</a></li>
+                                        <li><a href="#">View All Proposals</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Create New Feature</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cards-body">
+                                <h1 class="yellow-color">55</h1>
+                                <p>DUE FEATURES</p>
+                            </div>
+                            <div class="cards-footer">
+                                <p>Implemented Today : 11</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="dashboard-cards">
+                            <div class="cards-header clearfix">
+                                <h3 class="pull-left">Issues</h3>
+                                <div class="dropdown pull-right">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><img src="images/dots.png" alt="dots"></button>
+                                    <ul class="dropdown-menu dropdown-menu-left">
+                                        <li><a href="#">View All Issues</a></li>
+                                        <li><a href="#">View Due Issues</a></li>
+                                        <li><a href="#">View All Cirital Issues</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Create New Issue</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cards-body">
+                                <h1 class="red-color">45</h1>
+                                <p>OPEN</p>
+                            </div>
+                            <div class="cards-footer">
+                                <p>Closed Today : 9</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="dashboard-cards">
+                            <div class="cards-header clearfix">
+                                <h3 class="pull-left">Tests</h3>
+                                <div class="dropdown pull-right">
+                                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown"><img src="images/dots.png" alt="dots"></button>
+                                    <ul class="dropdown-menu dropdown-menu-left">
+                                        <li><a href="#">View All Test Cases</a></li>
+                                        <li><a href="#">View Due Tasks</a></li>
+                                        <li><a href="#">View All Test Plans</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Create New Test Case</a></li>
+                                        <li><a href="#">Create New Test Plan</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cards-body">
+                                <h1 class="violet-color">75</h1>
+                                <p>TEST CASES</p>
+                            </div>
+                            <div class="cards-footer">
+                                <p>Tested Today : 7</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!------------ End of Dashboard Cards ------------->
+
+
+
+                    <!------------ Dashboard Charts ------------->
+                    <div class="col-md-6 dashboard-charts">
+                        <div class="chart-area">
+                            <div id="left-chart" style="min-width: 520px; height: 380px; margin: 0 auto"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 dashboard-charts">
+                        <div class="chart-area">
+                            <div id="right-chart" style="min-width: 520px; height: 380px; margin: 0 auto"></div>
+                        </div>
+                    </div>
+
+
+
+                    <!------------ Dashboard Bottom ------------->
+                    <div class="col-md-8 recent-activity">
+                        <div class="activity-box">
+                            <div class="activity-box-header clearfix">
+                                <h4 class="pull-left">Recent Activities</h4>
+                                <a href="#" class="pull-right">View All Activities</a>
+                            </div>
+                            <div class="activity-box-body">
+                                <ul>
+                                    <li><p>Bappy renamed the task “add new menu” to “update the existing menu”.</p></li>
+                                    <li><p>Fatin add the task “create new section” to “update section”.</p></li>
+                                    <li><p>Rishad renamed the task “Payment System” to “No Need for Payment”.</p></li>
+                                    <li><p>Asif created the task “update payment method” Assigned "Mr.Rishad"</p></li>
+                                    <li><p>admin renamed the task “add new menu” to “update the existing menu”.</p></li>
+                                    <li><p>worker1 renamed the task “add new menu” to “update the existing menu”.</p></li>
+                                    <li><p>Bappy renamed the task “add new menu” to “update the existing menu”.</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 dashboard-overview">
+                        <div class="overview-box clearfix">
+                            <div class="overview-box-header">
+                                <h4>Project Completeness</h4>
+                            </div>
+                            
+                            <div class="overview-box-body clearfix">
+                                <div class="progress-bar position" data-percent="75" data-duration="1000" data-color="#ccc,yellow"></div>
+                                <p class="circle-text">Deadline: 12-5-17</p>
+                            </div>
+                            
+                            <div class="overview-box-footer">
+                                <div class="row">
+                                    <div class="col-md-6 overview-cards">
+                                        <p>Task : 33 / 7</p>
+                                    </div>
+                                    <div class="col-md-6 overview-cards">
+                                        <p>Features : 25 / 9</p>
+                                    </div>
+                                    <div class="col-md-6 overview-cards">
+                                        <p>Issues : 15 / 5</p>
+                                    </div>
+                                    <div class="col-md-6 overview-cards">
+                                        <p>Tests : 55 / 22</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                <!--  End of Row-->
+
+            </div>
+            <!-- End of container-fluid-->
+
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- highcharts-->
+    <script src="js/highcharts.js"></script>
+    <script src="js/exporting.js"></script>
+    <script src="js/progressbar.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+
+
+    <!--  left-chart-->
+
+    <script>
+        $(function () {
+            Highcharts.chart('left-chart', {
+                title: {
+                    text: 'Task & Features Activity',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'Based On Daily Results',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['SAT', 'SUN', 'MON', 'TUE', 'WED', 'THR', 'FRI']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Daily Percentage'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+            }]
+                },
+                tooltip: {
+                    valueSuffix: '%'
+                },
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    x: 0,
+                    y: 0
+                },
+                series: [{
+                    name: 'Tasks',
+                    color: '#2196f3',
+                    data: [37, 36, 49, 64, 18, 21, 77]
+        }, {
+                    name: 'Features',
+                    color: '#ffa000',
+                    data: [17, 66, 19, 24, 98, 21, 27]
+        }]
+
+            });
+        });
+    </script>
+
+
+    <!--  right-chart-->
+
+    <script>
+        $(function () {
+            Highcharts.chart('right-chart', {
+                title: {
+                    text: 'Test & Issues Activity',
+                    x: -20 //center
+                },
+                subtitle: {
+                    text: 'Based On Daily Results',
+                    x: -20
+                },
+                xAxis: {
+                    categories: ['SAT', 'SUN', 'MON', 'TUE', 'WED', 'THR', 'FRI']
+                },
+                yAxis: {
+                    title: {
+                        text: 'Daily Percentage'
+                    },
+                    plotLines: [{
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+            }]
+                },
+                tooltip: {
+                    valueSuffix: '%'
+                },
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    x: 0,
+                    y: 0
+                },
+                series: [{
+                    name: 'Tests',
+                    color: '#7e57c2',
+                    data: [37, 16, 49, 34, 68, 21, 77]
+        }, {
+                    name: 'Issues',
+                    color: '#ff1744',
+                    data: [17, 26, 59, 54, 98, 41, 47]
+        }]
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

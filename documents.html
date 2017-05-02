@@ -1,0 +1,466 @@
+<!--
+//////////////////////////////////////////////////////////////////////////////////////////
+//										                                            	//
+// Project:	SOFTWARE DEVELOPMENT MANAGEMENT SYSTEM [SDMS]	                            //
+//		                                                                                //
+// File: documents.html	     						                                    //
+//											                                            //
+// Version: 1.0										                                    //
+//										                                            	//
+// Description:                                                                        	//
+//											                                            //
+//		Easy software project management applicaiton.                                   //
+//		Will be implemented on php - laravel							                //
+//											                                            //
+//											                                            //
+//											                                            //
+//											                                            //
+// Author: Ami Bappy [amibappy77@gmail.com]						                        //
+//                                                                                      //
+// Github: https://github.com/amibappy                                                  //
+//                                                                                      //
+//        										                                        //
+//  .______       .___      .______   .______   ____.  .____ 				            //
+//  |   _  \      /   \     |   _  \  |   _  \  \   \  /   / 				            //
+//  |  |_)  |    /  ^  \    |  |_)  | |  |_)  |  \   \/   /  				            //
+//  |   _  <    /  /_\  \   |   ___/  |   ___/    \_    _/   				            //
+//  |  |_)  |  /  _____  \  |  |      |  |          |  |     				            //
+//  |______/  /__/     \__\ | _|      | _|          |__|     				            //
+//                                                       				                //
+//											                                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Copyright (c) 2017 Bappy [amibappy77@gmail.com]					                    //
+// All Rights Reserved.									                                //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Unauthorized copying of this file, via any medium is strictly prohibited	            //
+// Proprietary and confidential								                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// DO NOT REMOVE THIS AREA                                                              //
+//                                                                                      //
+////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SDMS - Documents</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/datepicker.css">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="project-page">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="projects.html">Select a Project &nbsp;&nbsp;&nbsp;<img src="images/project.png" alt="project"></a></li>
+                    <li>
+                        <a id="settings-icon" href="settings.html"><img src="images/settings.png" alt="settings"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/user.png" alt=""> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="u">Users Management</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+    <!--      Main Body    -->
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="dashboard.html" class="top-items"><img src="images/dashboard.png" alt="dashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="notifications.html" class="top-items"><img src="images/notifications.png" alt="notifications">Notifications <span class="circle-no">5</span></a>
+                </li>
+                <li>
+                    <a href="mailbox.html" class="top-items"><img src="images/mailbox.png" alt="mailbox">Mail Box</a>
+                </li>
+                <li class="active">
+                    <a href="documents.html" class="top-items"><img src="images/documents.png" alt="documents">Documents</a>
+                </li>
+                <li class="sidebar-titles">Project Management</li>
+                <li>
+                    <a href="planning.html"><img src="images/planning.png" alt="planning">Planning</a>
+                </li>
+                <li>
+                    <a href="tasks.html"><img src="images/task.png" alt="tasks">Tasks</a>
+                </li>
+                <li>
+                    <a href="members.html"><img src="images/members.png" alt="memebers">Members</a>
+                </li>
+                <li>
+                    <a href="configuration.html"><img src="images/configuration.png" alt="configuration">Configuration</a>
+                </li>
+                <li class="sidebar-titles">Requirement Management</li>
+                <li>
+                    <a href="proposals.html"><img src="images/proposal.png" alt="proposal">Proposals</a>
+                </li>
+                <li>
+                    <a href="strategies.html"><img src="images/strategies.png" alt="strategies">Strategies</a>
+                </li>
+                <li>
+                    <a href="features.html"><img src="images/features.png" alt="">Features</a>
+                </li>
+                <li class="sidebar-titles">Test Management</li>
+                <li>
+                    <a href="testcases.html"><img src="images/testcase.png" alt="test-case">Test Cases</a>
+                </li>
+                <li>
+                    <a href="testplans.html"><img src="images/testplan.png" alt="testplan">Test Plans</a>
+                </li>
+                <li class="sidebar-titles">Issue Management</li>
+                <li>
+                    <a href="issues.html"><img src="images/issue.png" alt="issue">Issues</a>
+                </li>
+            </ul>
+
+            <a href="#" class="back-to-top"><img src="images/up-arrow.png" alt="up-arrow"></a>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 dashboard-header">
+                        <h1>Documents</h1>
+                        <p>All informations are regarding selected project.</p>
+                    </div>
+                    <div class="col-md-11">
+                        <div class="documents-upload-box">
+                            <div class="upload-box-header">
+                                <h4>Upload New Document</h4>
+                            </div>
+                            <div class="upload-area">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="form-group">
+                                                <label for="usr">Document Name :</label>
+                                                <input type="text" class="form-control" id="usr" placeholder="Enter Document Name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="usr">Document ID :</label>
+                                                <input type="text" class="form-control" id="usr" placeholder="Enter Document ID" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="usr">Document Type :</label>
+                                                <input type="text" class="form-control" id="usr" placeholder="Enter Document Type" required>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="upload-btn-area">
+                                               <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                    <span class="btn btn-default btn-file"><span class="up-btn-title">Choose File For Upload</span>
+                                                    <input type="file" required />
+                                                    </span>
+                                                </div>
+                    
+                                                <button type="submit" class="btn btn-default doc-upload-btn">UPLOAD &nbsp;<span class="glyphicon glyphicon-cloud-upload"></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                        <!-- /end of documents-upload-box -->
+                    </div>
+                    <!-- /end of col-md-11 -->
+                    
+                    <div class="col-md-11">
+                        <div class="all-documents">
+                            <div class="all-documents-header">
+                                <h4>Project Documents</h4>
+                            </div>
+                            <div class="all-documents-body">
+                                <ul>
+                                    <li>
+                                        <div class="document-list">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <div class="doc-list-img">
+                                                        <img src="images/word.png" alt="pdf image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="doc-list-name">
+                                                        <h4>Software Requirement Specification</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-id">
+                                                        <h4>ID : D0023</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="doc-list-info">
+                                                        <p>Uploaded By : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Uploaded On : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:30pm, 12-3-17</span></p>
+                                                        <p>Document Type : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Requirement Documents</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-control">
+                                                        <a href="#"><img src="images/download.png" alt="download"></a>
+                                                        <a href="#"><img src="images/doc-trash.png" alt="trash"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="document-list">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <div class="doc-list-img">
+                                                        <img src="images/pdf.png" alt="pdf image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="doc-list-name">
+                                                        <h4>Software Requirement Specification</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-id">
+                                                        <h4>ID : D0023</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="doc-list-info">
+                                                        <p>Uploaded By : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Uploaded On : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:30pm, 12-3-17</span></p>
+                                                        <p>Document Type : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Requirement Documents</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-control">
+                                                        <a href="#"><img src="images/download.png" alt="download"></a>
+                                                        <a href="#"><img src="images/doc-trash.png" alt="trash"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="document-list">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <div class="doc-list-img">
+                                                        <img src="images/exel.png" alt="pdf image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="doc-list-name">
+                                                        <h4>Software Requirement Specification</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-id">
+                                                        <h4>ID : D0023</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="doc-list-info">
+                                                        <p>Uploaded By : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Uploaded On : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:30pm, 12-3-17</span></p>
+                                                        <p>Document Type : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Requirement Documents</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-control">
+                                                        <a href="#"><img src="images/download.png" alt="download"></a>
+                                                        <a href="#"><img src="images/doc-trash.png" alt="trash"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="document-list">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <div class="doc-list-img">
+                                                        <img src="images/pdf.png" alt="pdf image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="doc-list-name">
+                                                        <h4>Software Requirement Specification</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-id">
+                                                        <h4>ID : D0023</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="doc-list-info">
+                                                        <p>Uploaded By : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Uploaded On : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:30pm, 12-3-17</span></p>
+                                                        <p>Document Type : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Requirement Documents</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-control">
+                                                        <a href="#"><img src="images/download.png" alt="download"></a>
+                                                        <a href="#"><img src="images/doc-trash.png" alt="trash"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="document-list">
+                                            <div class="row">
+                                                <div class="col-md-1">
+                                                    <div class="doc-list-img">
+                                                        <img src="images/pdf.png" alt="pdf image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="doc-list-name">
+                                                        <h4>Software Requirement Specification</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-id">
+                                                        <h4>ID : D0023</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="doc-list-info">
+                                                        <p>Uploaded By : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Uploaded On : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3:30pm, 12-3-17</span></p>
+                                                        <p>Document Type : <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Requirement Documents</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="doc-list-control">
+                                                        <a href="#"><img src="images/download.png" alt="download"></a>
+                                                        <a href="#"><img src="images/doc-trash.png" alt="trash"></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /end of col-md-11 -->
+
+                </div>
+                <!-- /end of row -->
+            </div>
+            <!-- /Container Fluid -->
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-filestyle.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        // file upload
+        $(":file").filestyle({
+            buttonText: "&nbsp;Browse File"
+        });
+
+        // menu toggle
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+        var amountScrolled = 333;
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > amountScrolled) {
+                $('a.back-to-top').fadeIn('slow');
+            } else {
+                $('a.back-to-top').fadeOut('slow');
+            }
+        });
+
+        $('a.back-to-top').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 700);
+            return false;
+        });
+    </script>
+
+</body>
+
+</html>

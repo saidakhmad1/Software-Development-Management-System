@@ -1,0 +1,689 @@
+<!--
+//////////////////////////////////////////////////////////////////////////////////////////
+//										                                            	//
+// Project:	SOFTWARE DEVELOPMENT MANAGEMENT SYSTEM [SDMS]	                            //
+//		                                                                                //
+// File: testcases.html							                                        //
+//											                                            //
+// Version: 1.0										                                    //
+//										                                            	//
+// Description:                                                                        	//
+//											                                            //
+//		Easy software project management applicaiton.                                   //
+//		Will be implemented on php - laravel							                //
+//											                                            //
+//											                                            //
+//											                                            //
+//											                                            //
+// Author: Ami Bappy [amibappy77@gmail.com]						                        //
+//                                                                                      //
+// Github: https://github.com/amibappy                                                  //
+//                                                                                      //
+//        										                                        //
+//  .______       .___      .______   .______   ____.  .____ 				            //
+//  |   _  \      /   \     |   _  \  |   _  \  \   \  /   / 				            //
+//  |  |_)  |    /  ^  \    |  |_)  | |  |_)  |  \   \/   /  				            //
+//  |   _  <    /  /_\  \   |   ___/  |   ___/    \_    _/   				            //
+//  |  |_)  |  /  _____  \  |  |      |  |          |  |     				            //
+//  |______/  /__/     \__\ | _|      | _|          |__|     				            //
+//                                                       				                //
+//											                                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Copyright (c) 2017 Bappy [amibappy77@gmail.com]					                    //
+// All Rights Reserved.									                                //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Unauthorized copying of this file, via any medium is strictly prohibited	            //
+// Proprietary and confidential								                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// DO NOT REMOVE THIS AREA                                                              //
+//                                                                                      //
+////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SDMS - TestCase</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/bootstrap-select.css">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="project-page">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="projects.html">Select a Project &nbsp;&nbsp;&nbsp;<img src="images/project.png" alt="project"></a></li>
+                    <li>
+                        <a id="settings-icon" href="settings.html"><img src="images/settings.png" alt="settings"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/user.png" alt=""> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">My Profile</a></li>
+                            <li><a href="users.html">Users Management</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+    <!--      Main Body    -->
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="dashboard.html" class="top-items"><img src="images/dashboard.png" alt="dashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="notifications.html" class="top-items"><img src="images/notifications.png" alt="notifications">Notifications <span class="circle-no">5</span></a>
+                </li>
+                <li>
+                    <a href="mailbox.html" class="top-items"><img src="images/mailbox.png" alt="mailbox">Mail Box</a>
+                </li>
+                <li>
+                    <a href="documents.html" class="top-items"><img src="images/documents.png" alt="documents">Documents</a>
+                </li>
+                <li class="sidebar-titles">Project Management</li>
+                <li>
+                    <a href="planning.html"><img src="images/planning.png" alt="planning">Planning</a>
+                </li>
+                <li>
+                    <a href="tasks.html"><img src="images/task.png" alt="tasks">Tasks</a>
+                </li>
+                <li>
+                    <a href="members.html"><img src="images/members.png" alt="memebers">Members</a>
+                </li>
+                <li>
+                    <a href="configuration.html"><img src="images/configuration.png" alt="configuration">Configuration</a>
+                </li>
+                <li class="sidebar-titles">Requirement Management</li>
+                <li>
+                    <a href="proposals.html"><img src="images/proposal.png" alt="proposal">Proposals</a>
+                </li>
+                <li>
+                    <a href="strategies.html"><img src="images/strategies.png" alt="strategies">Strategies</a>
+                </li>
+                <li>
+                    <a href="features.html"><img src="images/features.png" alt="">Features</a>
+                </li>
+                <li class="sidebar-titles">Test Management</li>
+                <li class="active">
+                    <a href="testcases.html"><img src="images/testcase.png" alt="test-case">Test Cases</a>
+                </li>
+                <li>
+                    <a href="testplans.html"><img src="images/testplan.png" alt="testplan">Test Plans</a>
+                </li>
+                <li class="sidebar-titles">Issue Management</li>
+                <li>
+                    <a href="issues.html"><img src="images/issue.png" alt="issue">Issues</a>
+                </li>
+            </ul>
+
+            <a href="#" class="back-to-top"><img src="images/up-arrow.png" alt="up-arrow"></a>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 dashboard-header">
+                        <h1>Test Cases</h1>
+                        <p>Store all your project test cases here</p>
+                    </div>
+
+                    <div class="col-md-11">
+                        <div class="planning-area">
+                            <div class="planning-area-header">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <form>
+                                            <input class="ml-n-15" id="project-search" type="text" placeholder="search features">
+                                        </form>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="plan-header-option clearfix mr-n-15">
+                                            <div class="option-left-half pull-right">
+                                                <button type="button" class="btn btn-default blue-border" data-toggle="modal" data-target="#modal-transparent">Add New TestCase</button>
+                                            </div>
+                                            <div class="option-right-half pull-right">
+                                                <select class="selectpicker div-toggle" data-target=".connected-sortable">
+                                                    <option value="show-all" data-show=".all" selected>
+                                                        <p>Show All TestCase</p>
+                                                    </option>
+                                                    <option value="show-by-me" data-show=".by">
+                                                        <p>Created By Me</p>
+                                                    </option>
+                                                    <option value="show-to-me" data-show=".me">
+                                                        <p>Assigned To Me</p>
+                                                    </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.planning-area-header -->
+
+                            <!-- Add New Modal -->
+                            <div class="modal modal-transparent fade" id="modal-transparent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="create-new-dialog modal-dialog">
+                                    <div class="modal-content">
+                                        <form action="">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                <h4 class="modal-title" id="myModalLabel">Create New TestCase</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="create-new-plan">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="usr">TestCase Title:</label>
+                                                                <input type="text" class="form-control" id="usr" placeholder="Enter Plan Title">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="usr">TestCase ID:</label>
+                                                                <input type="text" class="form-control" id="usr" placeholder="Enter Project ID">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="usr">Purpose:</label>
+                                                                <input type="text" class="form-control" id="usr" placeholder="Enter Plan Purpose">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="pull-left">Related To : </label>
+                                                                <select class="selectpicker form-control mail-select" multiple data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true" data-header="Select Connected Items" data-container="body" required>
+                                                                    <optgroup label="Plannings">
+                                                                        <option data-tokens="E002" data-subtext="Create login box">P012</option>
+                                                                        <option data-tokens="E023" data-subtext="Login authentication">P015</option>
+                                                                        <option data-tokens="E007" data-subtext="Login Redirect">P007</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Tasks">
+                                                                        <option data-tokens="E002" data-subtext="Login task">T022</option>
+                                                                        <option data-tokens="E023" data-subtext="Database design">T045</option>
+                                                                        <option data-tokens="E007" data-subtext="Test new connection">T027</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Proposals">
+                                                                        <option data-tokens="E002" data-subtext="Client proposal">P052</option>
+                                                                        <option data-tokens="E023" data-subtext="Client New requirement">P023</option>
+                                                                        <option data-tokens="E007" data-subtext="Initial proposals">P012</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Strategies">
+                                                                        <option data-tokens="E002" data-subtext="First prototype">S032</option>
+                                                                        <option data-tokens="E023" data-subtext="Second prototype">S033</option>
+                                                                        <option data-tokens="E007" data-subtext="Third prototype">S022</option>
+                                                                    </optgroup>
+                                                                    
+                                                                    <optgroup label="Features">
+                                                                        <option data-tokens="E002" data-subtext="Create new box">F012</option>
+                                                                        <option data-tokens="E023" data-subtext="New login button">F023</option>
+                                                                        <option data-tokens="E007" data-subtext="Update old section">F042</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="pull-left">Priority Limit:</label>
+                                                                <select class="selectpicker form-control">
+                                                                    <option>Normal</option>
+                                                                    <option>Medium</option>
+                                                                    <option>High</option>
+                                                                    <option>Critical</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="pull-left">TestCase Type:</label>
+                                                                <select class="selectpicker form-control">
+                                                                    <option>Theory</option>
+                                                                    <option>Initial</option>
+                                                                    <option>Required</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="pull-left">Current Status:</label>
+                                                                <select class="selectpicker form-control">
+                                                                    <option>Valid</option>
+                                                                    <option>Invalid</option>
+                                                                    <option>Inprograce</option>
+                                                                    <option>Ignore</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="pull-left">Privacy Type: </label>
+                                                                <select class="selectpicker form-control">
+                                                                    <option>Public</option>
+                                                                    <option>Assigned Only</option>
+                                                                    <option>Owner Only</option>
+                                                                    <option>None</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="usr">Due Date:</label>
+                                                                <div id="datepicker" class="input-group date pull-left" data-date-format="mm-dd-yyyy">
+                                                                    <input class="form-control" type="text" readonly />
+                                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="usr">Expiration Date:</label>
+                                                                <div id="expdatepicker" class="input-group date pull-left" data-date-format="mm-dd-yyyy">
+                                                                    <input class="form-control" type="text" readonly />
+                                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 mt-15">
+                                                            <div class="form-group">
+                                                                <label class="pull-left">Assigned To : </label>
+                                                                <select class="selectpicker form-control mail-select" multiple data-live-search="true" data-live-search-placeholder="Search" data-actions-box="true" data-header="Select Members To Assign" data-container="body" required>
+                                                                    =
+                                                                    <optgroup label="Groups">
+                                                                        <option data-tokens="E002" data-subtext="Frontend Group">Developer Group 1</option>
+                                                                        <option data-tokens="E023" data-subtext="Backend Group">Developer Group 2</option>
+                                                                        <option data-tokens="E007" data-subtext="Database Group">Developer Group 3</option>
+                                                                    </optgroup>
+                                                                    <optgroup label="Members">
+                                                                        <option data-tokens="E002" data-subtext="Developer">Employee 1</option>
+                                                                        <option data-tokens="E023" data-subtext="Designer">Employee 2</option>
+                                                                        <option data-tokens="E007" data-subtext="Tester">Employee 3</option>
+                                                                        <option data-tokens="E027" data-subtext="Analyst">Employee 4</option>
+                                                                        <option data-tokens="E077" data-subtext="Developer">Employee 5</option>
+                                                                        <option data-tokens="E037" data-subtext="Developer">Employee 6</option>
+                                                                        <option data-tokens="E037" data-subtext="Designer">Employee 7</option>
+                                                                    </optgroup>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 mt-15">
+                                                            <div class="form-group">
+                                                                <label class="pull-left">Attachment : </label>
+                                                                <br>
+                                                                <input type="file" id="filestyle-attach" class="filestyle form-control pull-left" data-placeholder="No file">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="comment">Steps:</label>
+                                                                <textarea placeholder="Enter Test Steps" class="form-control" maxlength="900" rows="5" id="desc"></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="comment">Test Data:</label>
+                                                                <textarea placeholder="Enter Test Data" class="form-control" maxlength="900" rows="5" id="desc"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="comment">Expected Results:</label>
+                                                                <textarea placeholder="Enter Expected Results" class="form-control" maxlength="900" rows="5" id="desc"></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="comment">Actual Results:</label>
+                                                                <textarea placeholder="Enter Actual Results" class="form-control" maxlength="900" rows="5" id="desc"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="comment">Test Summary:</label>
+                                                                <textarea placeholder="Enter Test Summary" class="form-control" maxlength="900" rows="5" id="desc"></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="comment">Notes:</label>
+                                                                <textarea placeholder="Enter Test Notes" class="form-control" maxlength="900" rows="5" id="desc"></textarea>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-default blue-border">Create New TestCase</button>
+                                                <button type="button" class="btn btn-default red-border" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  End of Add New Plan Dialougbox-->
+
+
+                            <div class="tasks-area-body">
+                                <div class="task-card-header">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <p>Open</p>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <p>In prograce</p>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <p>Complete</p>
+                                        </div>
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                                <!-- /task-card-header -->
+
+                                <div class="task-card-body">
+                                    <div class="row">
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <div class="task-card-open">
+                                                <ul class="connected-sortable droppable-area1" style="padding: 10px 0;">
+                                                    <li class="draggable-item all me">
+                                                        <h4><a href="#">Test New Section 1</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    <li class="draggable-item all">
+                                                        <h4><a href="#">Test New Section 2</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    <li class="draggable-item all me">
+                                                        <h4><a href="#">Test New Section 3</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    <li class="draggable-item all me">
+                                                        <h4><a href="#">Test New Section 4</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    <li class="draggable-item all me">
+                                                        <h4><a href="#">Test New Section 5</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <div class="task-card-prograce">
+                                                <ul class="connected-sortable droppable-area2" style="padding: 10px 0;">
+                                                    <li class="draggable-item all me">
+                                                        <h4><a href="#">Test New Section 6</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    <li class="draggable-item all">
+                                                        <h4><a href="#">Test New Section 7</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    <li class="draggable-item all">
+                                                        <h4><a href="#">Test New Section 8</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4 col-sm-4 col-xs-4">
+                                            <div class="task-card-complete">
+                                                <ul class="connected-sortable droppable-area3" style="padding: 10px 0;">
+                                                    <li class="draggable-item all">
+                                                        <h4><a href="#">Test New Section 9</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    <li class="draggable-item all">
+                                                        <h4><a href="#">Test New Section 10</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    <li class="draggable-item all me">
+                                                        <h4><a href="#">Test New Section 11</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                     <li class="draggable-item all me">
+                                                        <h4><a href="#">Test New Section 12</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                     <li class="draggable-item all me">
+                                                        <h4><a href="#">Test New Section 13</a></h4>
+                                                        <p>Task ID: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T034</span></p>
+                                                        <p>Created By: <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project Manager</span></p>
+                                                        <p>Assigned To: <span>&nbsp;&nbsp;&nbsp;&nbsp;Designer</span></p>
+                                                    </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                                <!-- /task-card-body -->
+
+
+
+                            </div>
+                            <!-- /tasks-area-body -->
+
+                        </div>
+                        <!-- /planning-area -->
+                    </div>
+                    <!-- /col-md-11 -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container-fluid -->
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/bootstrap-select.js"></script>
+    <script src="js/bootstrap-filestyle.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        //select box
+
+        $(document).on('change', '.div-toggle', function () {
+            var target = $(this).data('target');
+            var show = $("option:selected", this).data('show');
+            $(target).children().addClass('hide');
+            $(show).removeClass('hide');
+        });
+        $(document).ready(function () {
+            $('.div-toggle').trigger('change');
+        });
+
+
+        //menu-toggle
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+        var amountScrolled = 333;
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > amountScrolled) {
+                $('a.back-to-top').fadeIn('slow');
+            } else {
+                $('a.back-to-top').fadeOut('slow');
+            }
+        });
+
+        $('a.back-to-top').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 700);
+            return false;
+        });
+    </script>
+
+
+    <script>
+        // .modal-backdrop classes
+
+        $(".modal-transparent").on('show.bs.modal', function () {
+            setTimeout(function () {
+                $(".modal-backdrop").addClass("modal-backdrop-transparent");
+            }, 0);
+        });
+        $(".modal-transparent").on('hidden.bs.modal', function () {
+            $(".modal-backdrop").addClass("modal-backdrop-transparent");
+        });
+
+
+
+        // datepicker
+
+        $(function () {
+            $("#datepicker").datepicker({
+                autoclose: true,
+                todayHighlight: true
+            }).datepicker('update', new Date());;
+        });
+
+        $(function () {
+            $("#expdatepicker").datepicker({
+                autoclose: true,
+                todayHighlight: true
+            }).datepicker('update', new Date());;
+        });
+
+
+
+
+
+        // modal - selectpicker
+
+        $('.selectpicker').selectpicker();
+
+
+        // filestyle
+        $(":file").filestyle({
+            placeholder: "No file"
+        });
+    </script>
+
+
+    <script>
+        $(init);
+
+        function init() {
+            $(".droppable-area1, .droppable-area2, .droppable-area3").sortable({
+                connectWith: ".connected-sortable",
+                stack: '.connected-sortable ul'
+            }).disableSelection();
+        }
+    </script>
+
+</body>
+
+</html>

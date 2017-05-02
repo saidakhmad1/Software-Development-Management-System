@@ -1,0 +1,228 @@
+<!--
+//////////////////////////////////////////////////////////////////////////////////////////
+//										                                            	//
+// Project:	SOFTWARE DEVELOPMENT MANAGEMENT SYSTEM [SDMS]	                            //
+//		                                                                                //
+// File: blank_template.html							                                //
+//											                                            //
+// Version: 1.0										                                    //
+//										                                            	//
+// Description:                                                                        	//
+//											                                            //
+//		Easy software project management applicaiton.                                   //
+//		Will be implemented on php - laravel							                //
+//											                                            //
+//											                                            //
+//											                                            //
+//											                                            //
+// Author: Ami Bappy [amibappy77@gmail.com]						                        //
+//                                                                                      //
+// Github: https://github.com/amibappy                                                  //
+//                                                                                      //
+//        										                                        //
+//  .______       .___      .______   .______   ____.  .____ 				            //
+//  |   _  \      /   \     |   _  \  |   _  \  \   \  /   / 				            //
+//  |  |_)  |    /  ^  \    |  |_)  | |  |_)  |  \   \/   /  				            //
+//  |   _  <    /  /_\  \   |   ___/  |   ___/    \_    _/   				            //
+//  |  |_)  |  /  _____  \  |  |      |  |          |  |     				            //
+//  |______/  /__/     \__\ | _|      | _|          |__|     				            //
+//                                                       				                //
+//											                                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Copyright (c) 2017 Bappy [amibappy77@gmail.com]					                    //
+// All Rights Reserved.									                                //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// Unauthorized copying of this file, via any medium is strictly prohibited	            //
+// Proprietary and confidential								                            //
+//											                                            //
+//////////////////////////////////////////////////////////////////////////////////////////
+//											                                            //
+// DO NOT REMOVE THIS AREA                                                              //
+//                                                                                      //
+////////////////////////////////////////////////////////////////////////////////////////// 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SDMS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/datepicker.css">
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="project-page">
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../navbar-static-top/">Select a Project &nbsp;&nbsp;&nbsp;<img src="images/project.png" alt="project"></a></li>
+                    <li>
+                        <a id="settings-icon" href="../navbar-fixed-top/"><img src="images/settings.png" alt="settings"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/user.png" alt=""> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My Profile</a></li>
+                            <li><a href="#">Logout</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Nav header</li>
+                            <li><a href="#">Separated link</a></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!--/.container-fluid -->
+    </nav>
+
+    <!--      Main Body    -->
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="dashboard.html" class="top-items"><img src="images/dashboard.png" alt="dashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="notifications.html" class="top-items"><img src="images/notifications.png" alt="notifications">Notifications <span class="circle-no">5</span></a>
+                </li>
+                <li>
+                    <a href="mailbox.html" class="top-items"><img src="images/mailbox.png" alt="mailbox">Mail Box</a>
+                </li>
+                <li>
+                    <a href="documents.html" class="top-items"><img src="images/documents.png" alt="documents">Documents</a>
+                </li>
+                <li class="sidebar-titles">Project Management</li>
+                <li>
+                    <a href="planning.html"><img src="images/planning.png" alt="planning">Planning</a>
+                </li>
+                <li>
+                    <a href="tasks.html"><img src="images/task.png" alt="tasks">Tasks</a>
+                </li>
+                <li>
+                    <a href="members.html"><img src="images/members.png" alt="memebers">Members</a>
+                </li>
+                <li>
+                    <a href="configuration.html"><img src="images/configuration.png" alt="configuration">Configuration</a>
+                </li>
+                <li class="sidebar-titles">Requirement Management</li>
+                <li>
+                    <a href="proposals.html"><img src="images/proposal.png" alt="proposal">Proposals</a>
+                </li>
+                <li>
+                    <a href="strategies.html"><img src="images/strategies.png" alt="strategies">Strategies</a>
+                </li>
+                <li>
+                    <a href="features.html"><img src="images/features.png" alt="">Features</a>
+                </li>
+                <li class="sidebar-titles">Test Management</li>
+                <li>
+                    <a href="testcases.html"><img src="images/testcase.png" alt="test-case">Test Cases</a>
+                </li>
+                <li>
+                    <a href="testplans.html"><img src="images/testplan.png" alt="testplan">Test Plans</a>
+                </li>
+                <li class="sidebar-titles">Issue Management</li>
+                <li>
+                    <a href="issues.html"><img src="images/issue.png" alt="issue">Issues</a>
+                </li>
+            </ul>
+
+            <a href="#" class="back-to-top"><img src="images/up-arrow.png" alt="up-arrow"></a>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 dashboard-header">
+                        <h1>Blank Page</h1>
+                        <p>Page title will be in this place</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+        var amountScrolled = 333;
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > amountScrolled) {
+                $('a.back-to-top').fadeIn('slow');
+            } else {
+                $('a.back-to-top').fadeOut('slow');
+            }
+        });
+
+        $('a.back-to-top').click(function () {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 700);
+            return false;
+        });
+    </script>
+
+</body>
+
+</html>
